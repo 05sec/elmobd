@@ -363,7 +363,7 @@ func (dev *RealDevice) processResult(result bytes.Buffer) error {
 	var trimmedParts []string
 
 	for p := range parts {
-		tmp := strings.Trim(parts[p], "\r ")
+		tmp := strings.Trim(parts[p], "\n\r ")
 
 		if tmp == "" {
 			continue
